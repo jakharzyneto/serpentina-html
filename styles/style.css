@@ -88,7 +88,7 @@ body {
   background-size: auto;
 }
 
-.nav-link:not(.active)::after {
+.nav-link:not(.active):not([href="/home.html"])::after {
   content: "";
   position: absolute;
   bottom: 0;
