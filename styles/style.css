@@ -169,6 +169,79 @@ body {
   color: black;
 }
 
+/* Events Page Navigation Tabs */
+.events-tab-container {
+  position: relative;
+  width: 100%;
+}
+
+.events-nav-tab {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid transparent;
+  border-image: url("../img/wavy-line.svg") 0 0 10 0;
+  transition: all 0.3s ease;
+}
+
+.events-nav-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-image: url("../img/wavy-line.svg") 0 0 0 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+
+/* VER MAIS Button Styling */
+.ver-mais-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #07b93d;
+  color: #000;
+  padding: 12px 24px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: "ABC Stefan", cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.ver-mais-btn:hover {
+  background-color: #059f33;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ver-mais-text {
+  font-weight: bold;
+}
+
+.ver-mais-arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.ver-mais-btn:hover .ver-mais-arrow {
+  transform: translateX(4px);
+}
+
 /* FERRAMENTAS Section */
 .ferramentas-section {
   padding: 2rem 0;
