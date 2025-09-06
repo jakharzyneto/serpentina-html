@@ -298,7 +298,6 @@ body {
   background-color: transparent;
   color: #000000;
   padding: 8px 16px;
-  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
@@ -326,6 +325,12 @@ body {
   border-radius: 25px;
   width: 82%;
   height: 53px;
+}
+
+@media screen and (max-width: 1024px) {
+  .newsletter-btn::before {
+    width: 100%;
+  }
 }
 
 .newsletter-arrow {
@@ -360,23 +365,6 @@ body {
 
 .footer-link:hover {
   color: #004499;
-}
-
-.email-address {
-  color: #000000;
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 1;
-}
-
-.phone-number {
-  color: #000000;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 2px;
 }
 
 /* Mobile Header Styles */

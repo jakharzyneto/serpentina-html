@@ -150,7 +150,7 @@
     </header>
     <main id="content"></main>
     <footer class="bg-[#FF82C6] relative">
-      <div class="wavy-line">
+      <div class="wavy-line absolute top-[-2px] lg:top-[-6px] left-0 right-0">
         <img
           src="/img/wavy-line.svg"
           alt="Wavy line"
@@ -170,11 +170,11 @@
             <a
               href="#"
               onclick="loadPage('join-us.html'); return false;"
-              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
+              class="text-2xl lg:text-[64px] font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
             >
               JUNTA-TE A NÓS!
             </a>
-            <div class="w-32 h-24 relative">
+            <div class="w-16 lg:w-32 h-12 lg:h-24 relative">
               <img
                 src="/img/home/join-vector.svg"
                 alt="Join vector illustration"
@@ -194,7 +194,7 @@
       <div class="px-8">
         <div class="py-8 text-center">
           <div class="flex items-center justify-center gap-8">
-            <div class="w-32 h-24 relative">
+            <div class="w-16 lg:w-32 h-12 lg:h-24 relative">
               <img
                 src="/img/home/tools-vector.svg"
                 alt="Tools vector illustration"
@@ -204,7 +204,7 @@
             <a
               href="#"
               onclick="loadPage('tools.html'); return false;"
-              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
+              class="text-2xl lg:text-[64px] font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
             >
               FERRAMENTAS
             </a>
@@ -230,17 +230,27 @@
           <div class="flex justify-between items-start flex-wrap gap-8">
             <div class="flex flex-col">
               <div class="relative">
-                <div class="absolute top-1 left-0 w-8 h-8">
+                <div
+                  class="absolute top-[1px] lg:top-1 left-0 lg:w-8 w-4 lg:h-8 h-4"
+                >
                   <img
                     src="/img/email-icon.svg"
                     alt="Email icon"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="email-address ml-8">INFO@SERPENTINA.PT</div>
+                <div
+                  class="lg:ml-8 ml-4 text-black text-[18px] lg:text-3xl font-bold uppercase tracking-wider leading-none"
+                >
+                  INFO@SERPENTINA.PT
+                </div>
               </div>
-              <div class="phone-number">+351 96 890 48 98</div>
-              <button class="newsletter-btn mt-8">
+              <div
+                class="text-black text-[18px] lg:text-3xl font-bold leading-none tracking-wider"
+              >
+                +351 96 890 48 98
+              </div>
+              <button class="newsletter-btn lg:text-[16px] text-[14px] mt-8">
                 SUBSCREVER NEWSLETTER
                 <span class="newsletter-arrow">→</span>
               </button>
