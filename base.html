@@ -14,7 +14,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="header-container">
+    <!-- Desktop Header -->
+    <header class="desktop-header">
       <nav class="header-nav">
         <div class="header-section nav-section">
           <a href="/home.html" class="nav-link">
@@ -46,6 +47,42 @@
             alt="Search icon"
             class="w-full h-full object-contain p-4 cursor-pointer"
           />
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div class="mobile-header-top">
+        <a href="/home.html" class="mobile-logo">
+          <img
+            src="/img/logo.svg"
+            alt="Serpentina Logo"
+            class="mobile-logo-img"
+          />
+        </a>
+        <div class="mobile-header-actions">
+          <button class="mobile-search-btn" id="mobileSearchBtn">
+            <img
+              src="/img/search.svg"
+              alt="Search icon"
+              class="mobile-search-icon"
+            />
+          </button>
+          <div class="mobile-hamburger" id="mobileHamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-content">
+          <a href="about-us.html" class="mobile-nav-link">QUEM SOMOS</a>
+          <a href="vision.html" class="mobile-nav-link">VISÃO</a>
+          <a href="actions.html" class="mobile-nav-link">AÇÕES</a>
+          <a href="reports.html" class="mobile-nav-link">RELATOS</a>
+          <a href="events.html" class="mobile-nav-link">EVENTOS</a>
         </div>
       </nav>
     </header>
@@ -177,6 +214,7 @@
       }
 
       function updateActiveNav(currentPage) {
+        // Update desktop nav
         document.querySelectorAll(".nav-link").forEach((link) => {
           link.classList.remove("active");
         });
@@ -184,8 +222,46 @@
         if (currentLink) {
           currentLink.classList.add("active");
         }
+
+        // Update mobile nav
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+        const currentMobileLink = document.querySelector(
+          `.mobile-nav a[href="${currentPage}"]`
+        );
+        if (currentMobileLink) {
+          currentMobileLink.classList.add("active");
+        }
       }
+
+      // Mobile hamburger menu functionality
+      function initMobileMenu() {
+        const hamburger = document.getElementById("mobileHamburger");
+        const mobileNav = document.getElementById("mobileNav");
+        const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+
+        if (hamburger && mobileNav) {
+          hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("change");
+            mobileNav.classList.toggle("active");
+          });
+        }
+
+        if (mobileSearchBtn) {
+          mobileSearchBtn.addEventListener("click", () => {
+            const searchTerm = prompt("O que procura?");
+            if (searchTerm) {
+              console.log("Procurando por:", searchTerm);
+            }
+          });
+        }
+      }
+
+      // Initialize page
       loadPage("/home.html");
+
+      // Desktop navigation
       document.querySelectorAll(".nav-link").forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
@@ -195,17 +271,42 @@
           }
         });
       });
+
+      // Mobile navigation
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const page = link.getAttribute("href");
+          if (page) {
+            loadPage(page);
+            // Close mobile menu after navigation
+            const hamburger = document.getElementById("mobileHamburger");
+            const mobileNav = document.getElementById("mobileNav");
+            if (hamburger && mobileNav) {
+              hamburger.classList.remove("change");
+              mobileNav.classList.remove("active");
+            }
+          }
+        });
+      });
+
+      // Initialize mobile menu
+      initMobileMenu();
     </script>
 
     <script>
-      document
-        .querySelector(".search-icon")
-        .addEventListener("click", function () {
-          const searchTerm = prompt("O que procura?");
-          if (searchTerm) {
-            console.log("Procurando por:", searchTerm);
-          }
-        });
+      // Desktop search functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const desktopSearchIcon = document.querySelector(".search-section img");
+        if (desktopSearchIcon) {
+          desktopSearchIcon.addEventListener("click", function () {
+            const searchTerm = prompt("O que procura?");
+            if (searchTerm) {
+              console.log("Procurando por:", searchTerm);
+            }
+          });
+        }
+      });
     </script>
   </body>
 </html>
