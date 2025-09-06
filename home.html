@@ -31,19 +31,44 @@
           </a>
         </div>
         <div class="header-section nav-section">
-          <a href="about-us.html" class="nav-link">QUEM SOMOS</a>
+          <a
+            href="#"
+            onclick="loadPage('about-us.html'); return false;"
+            class="nav-link"
+            >QUEM SOMOS</a
+          >
         </div>
         <div class="header-section nav-section">
-          <a href="vision.html" class="nav-link">VISÃO</a>
+          <a
+            href="#"
+            onclick="loadPage('vision.html'); return false;"
+            class="nav-link"
+            >VISÃO</a
+          >
         </div>
         <div class="header-section nav-section">
-          <a href="actions.html" class="nav-link">AÇÕES</a>
+          <a
+            href="#"
+            onclick="loadPage('actions.html'); return false;"
+            class="nav-link"
+            >AÇÕES</a
+          >
         </div>
         <div class="header-section nav-section">
-          <a href="reports.html" class="nav-link">RELATOS</a>
+          <a
+            href="#"
+            onclick="loadPage('reports.html'); return false;"
+            class="nav-link"
+            >RELATOS</a
+          >
         </div>
         <div class="header-section nav-section">
-          <a href="events.html" class="nav-link">EVENTOS</a>
+          <a
+            href="#"
+            onclick="loadPage('events.html'); return false;"
+            class="nav-link"
+            >EVENTOS</a
+          >
         </div>
         <div class="header-section search-section">
           <img
@@ -82,11 +107,36 @@
       </div>
       <nav class="mobile-nav" id="mobileNav">
         <div class="mobile-nav-content">
-          <a href="about-us.html" class="mobile-nav-link">QUEM SOMOS</a>
-          <a href="vision.html" class="mobile-nav-link">VISÃO</a>
-          <a href="actions.html" class="mobile-nav-link">AÇÕES</a>
-          <a href="reports.html" class="mobile-nav-link">RELATOS</a>
-          <a href="events.html" class="mobile-nav-link">EVENTOS</a>
+          <a
+            href="#"
+            onclick="loadPage('about-us.html'); return false;"
+            class="mobile-nav-link"
+            >QUEM SOMOS</a
+          >
+          <a
+            href="#"
+            onclick="loadPage('vision.html'); return false;"
+            class="mobile-nav-link"
+            >VISÃO</a
+          >
+          <a
+            href="#"
+            onclick="loadPage('actions.html'); return false;"
+            class="mobile-nav-link"
+            >AÇÕES</a
+          >
+          <a
+            href="#"
+            onclick="loadPage('reports.html'); return false;"
+            class="mobile-nav-link"
+            >RELATOS</a
+          >
+          <a
+            href="#"
+            onclick="loadPage('events.html'); return false;"
+            class="mobile-nav-link"
+            >EVENTOS</a
+          >
         </div>
       </nav>
     </header>
@@ -293,33 +343,17 @@
       }
 
       // Initialize page
-      loadPage("/home.html");
+      loadPage("home-content.html");
 
-      // Desktop navigation
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const page = link.getAttribute("href");
-          if (page) {
-            loadPage(page);
-          }
-        });
-      });
-
-      // Mobile navigation
+      // Mobile navigation - close menu after navigation
       document.querySelectorAll(".mobile-nav-link").forEach((link) => {
         link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const page = link.getAttribute("href");
-          if (page) {
-            loadPage(page);
-            // Close mobile menu after navigation
-            const hamburger = document.getElementById("mobileHamburger");
-            const mobileNav = document.getElementById("mobileNav");
-            if (hamburger && mobileNav) {
-              hamburger.classList.remove("change");
-              mobileNav.classList.remove("active");
-            }
+          // Close mobile menu after navigation
+          const hamburger = document.getElementById("mobileHamburger");
+          const mobileNav = document.getElementById("mobileNav");
+          if (hamburger && mobileNav) {
+            hamburger.classList.remove("change");
+            mobileNav.classList.remove("active");
           }
         });
       });
