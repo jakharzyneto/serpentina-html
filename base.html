@@ -109,11 +109,13 @@
                 class="w-full h-full object-contain"
               />
             </div>
-            <h2
-              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider"
+            <a
+              href="#"
+              onclick="loadPage('join-us.html'); return false;"
+              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
             >
               JUNTA-TE A NÓS!
-            </h2>
+            </a>
             <div class="w-32 h-24 relative">
               <img
                 src="/img/home/join-vector.svg"
@@ -141,11 +143,13 @@
                 class="w-full h-full object-contain"
               />
             </div>
-            <h2
-              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider"
+            <a
+              href="#"
+              onclick="loadPage('tools.html'); return false;"
+              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
             >
               FERRAMENTAS
-            </h2>
+            </a>
             <div class="w-32 h-24 relative">
               <img
                 src="/img/home/tools-vector.svg"
@@ -210,11 +214,37 @@
 
     <script>
       async function loadPage(page) {
-        const response = await fetch(page);
-        const html = await response.text();
-        document.getElementById("content").innerHTML = html;
+        try {
+          console.log("Loading page:", page);
+          const response = await fetch(page);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const html = await response.text();
 
-        updateActiveNav(page);
+          // Check if the page is a content-only file (starts with <!--)
+          if (html.trim().startsWith("<!--")) {
+            document.getElementById("content").innerHTML = html;
+          } else {
+            // If it's a full HTML page, extract the main content
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+            const mainContent = doc.querySelector("main");
+            if (mainContent) {
+              document.getElementById("content").innerHTML =
+                mainContent.innerHTML;
+            } else {
+              document.getElementById("content").innerHTML = html;
+            }
+          }
+
+          console.log("Page loaded successfully:", page);
+          updateActiveNav(page);
+        } catch (error) {
+          console.error("Error loading page:", page, error);
+          document.getElementById("content").innerHTML =
+            '<div class="p-8 text-center"><h2 class="text-2xl font-bold text-red-600">Erro ao carregar a página</h2><p class="text-gray-600">A página solicitada não pôde ser carregada.</p></div>';
+        }
       }
 
       function updateActiveNav(currentPage) {
