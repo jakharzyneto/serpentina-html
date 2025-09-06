@@ -159,6 +159,11 @@ body {
   color: black;
 }
 
+.nav-link.active.logo-link {
+  background-color: transparent;
+  color: black;
+}
+
 .nav-link.active[href="/home.html"] {
   background-color: #ff82c6;
   color: black;

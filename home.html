@@ -22,7 +22,11 @@
     <header class="desktop-header">
       <nav class="header-nav">
         <div class="header-section nav-section">
-          <a href="/home.html" class="nav-link">
+          <a
+            href="#"
+            onclick="loadPage('home-content.html'); return false;"
+            class="nav-link logo-link"
+          >
             <img
               src="/img/logo.svg"
               alt="Serpentina Logo"
@@ -83,7 +87,11 @@
     <!-- Mobile Header -->
     <header class="mobile-header">
       <div class="mobile-header-top">
-        <a href="/home.html" class="mobile-logo">
+        <a
+          href="#"
+          onclick="loadPage('home-content.html'); return false;"
+          class="mobile-logo logo-link"
+        >
           <img
             src="/img/logo.svg"
             alt="Serpentina Logo"
@@ -302,7 +310,11 @@
         document.querySelectorAll(".nav-link").forEach((link) => {
           link.classList.remove("active");
         });
-        const currentLink = document.querySelector(`a[href="${currentPage}"]`);
+
+        // Find the link that matches the current page by checking onclick attribute
+        const currentLink = document.querySelector(
+          `a[onclick*="'${currentPage}'"]`
+        );
         if (currentLink) {
           currentLink.classList.add("active");
         }
@@ -311,8 +323,10 @@
         document.querySelectorAll(".mobile-nav-link").forEach((link) => {
           link.classList.remove("active");
         });
+
+        // Find the mobile link that matches the current page by checking onclick attribute
         const currentMobileLink = document.querySelector(
-          `.mobile-nav a[href="${currentPage}"]`
+          `.mobile-nav a[onclick*="'${currentPage}'"]`
         );
         if (currentMobileLink) {
           currentMobileLink.classList.add("active");
@@ -344,6 +358,11 @@
 
       // Initialize page
       loadPage("home-content.html");
+
+      // Set home as active on initial load
+      setTimeout(() => {
+        updateActiveNav("home-content.html");
+      }, 100);
 
       // Mobile navigation - close menu after navigation
       document.querySelectorAll(".mobile-nav-link").forEach((link) => {
