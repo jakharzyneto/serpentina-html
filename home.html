@@ -1,95 +1,346 @@
-<div class="pt-8 bg-[#FF82C6]">
-  <div class="container mx-auto px-4">
-    <div class="w-full h-[70vh] overflow-hidden rounded-3xl mb-8 lg:mb-16">
-      <img
-        src="./img/home/hero-home.svg"
-        alt="Hero Home"
-        class="w-full h-full object-cover object-center"
-      />
-    </div>
-  </div>
-  <!-- Content Blocks Section -->
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col">
-      <!-- First Content Block -->
-      <div class="max-w-3xl mx-auto">
-        <div class="relative rounded-2xl overflow-hidden shadow-xl mb-6">
-          <img
-            src="/img/home/section2-home.svg"
-            alt="Children collaborating on creative project"
-            class="w-full h-[200px] lg:h-[360px] object-cover object-center transition-transform duration-300 hover:scale-105"
-          />
-        </div>
-        <div class="flex flex-col">
-          <h2
-            class="text-4xl lg:text-[64px] mt-8 font-bold text-[#000000] text-center tracking-wider leading-tight"
-          >
-            Destaque com titulo
-          </h2>
-          <p
-            class="text-lg lg:text-[18px] leading-relaxed text-[#000000] text-justify mt-16 mb-[32px]"
-          >
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maxroin tempus, magna id scelerisque vestibulum, nulla
-            ex pharetra sapien, tempor posuere massa neque nec felis. Aliquam
-            sem ipsum, vehicula ac tortor vel, egestas ullamcorper dui.
-            Curabitur at risus sodales, tristique est id, euismod justo. Mauris
-            nec leo non libero sodales lobortis. Quisque a neque pretium, dictum
-            tellus vitae, euismod neque. Nulla.
-          </p>
-          <a
-            href="#"
-            onclick="loadPage('spotlight.html'); return false;"
-            class="ver-mais-btn mb-[60px] lg:mb-[140px]"
-          >
-            <span class="ver-mais-text">VER MAIS</span>
-            <span class="ver-mais-arrow">→</span>
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serpentina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+      <nav class="header-nav">
+        <div class="header-section nav-section">
+          <a href="/home.html" class="nav-link">
+            <img
+              src="/img/logo.svg"
+              alt="Serpentina Logo"
+              class="object-contain"
+            />
           </a>
         </div>
-      </div>
-      <div class="max-w-3xl mx-auto">
-        <div class="relative rounded-2xl overflow-hidden shadow-xl mb-6">
+        <div class="header-section nav-section">
+          <a href="about-us.html" class="nav-link">QUEM SOMOS</a>
+        </div>
+        <div class="header-section nav-section">
+          <a href="vision.html" class="nav-link">VISÃO</a>
+        </div>
+        <div class="header-section nav-section">
+          <a href="actions.html" class="nav-link">AÇÕES</a>
+        </div>
+        <div class="header-section nav-section">
+          <a href="reports.html" class="nav-link">RELATOS</a>
+        </div>
+        <div class="header-section nav-section">
+          <a href="events.html" class="nav-link">EVENTOS</a>
+        </div>
+        <div class="header-section search-section">
           <img
-            src="/img/home/section2-home.svg"
-            alt="Children collaborating on creative project"
-            class="w-full h-[200px] lg:h-[360px] object-cover object-center transition-transform duration-300 hover:scale-105"
+            src="/img/search.svg"
+            alt="Search icon"
+            class="w-full h-full object-contain p-4 cursor-pointer"
           />
         </div>
-        <div class="flex flex-col">
-          <h2
-            class="text-4xl lg:text-[64px] mt-8 font-bold text-[#000000] text-center tracking-wider leading-tight"
-          >
-            Destaque com titulo
-          </h2>
-          <p
-            class="text-lg lg:text-[18px] leading-relaxed text-[#000000] text-justify mt-16 mb-[32px]"
-          >
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maxroin tempus, magna id scelerisque vestibulum, nulla
-            ex pharetra sapien, tempor posuere massa neque nec felis. Aliquam
-            sem ipsum, vehicula ac tortor vel, egestas ullamcorper dui.
-            Curabitur at risus sodales, tristique est id, euismod justo. Mauris
-            nec leo non libero sodales lobortis. Quisque a neque pretium, dictum
-            tellus vitae, euismod neque. Nulla.
-          </p>
-          <a
-            href="#"
-            onclick="loadPage('tools.html'); return false;"
-            class="ver-mais-btn mb-[60px] lg:mb-[140px]"
-          >
-            <span class="ver-mais-text">VER MAIS</span>
-            <span class="ver-mais-arrow">→</span>
-          </a>
+      </nav>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div class="mobile-header-top">
+        <a href="/home.html" class="mobile-logo">
+          <img
+            src="/img/logo.svg"
+            alt="Serpentina Logo"
+            class="mobile-logo-img"
+          />
+        </a>
+        <div class="mobile-header-actions">
+          <button class="mobile-search-btn" id="mobileSearchBtn">
+            <img
+              src="/img/search.svg"
+              alt="Search icon"
+              class="mobile-search-icon"
+            />
+          </button>
+          <div class="mobile-hamburger" id="mobileHamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-content">
+          <a href="about-us.html" class="mobile-nav-link">QUEM SOMOS</a>
+          <a href="vision.html" class="mobile-nav-link">VISÃO</a>
+          <a href="actions.html" class="mobile-nav-link">AÇÕES</a>
+          <a href="reports.html" class="mobile-nav-link">RELATOS</a>
+          <a href="events.html" class="mobile-nav-link">EVENTOS</a>
+        </div>
+      </nav>
+    </header>
+    <main id="content"></main>
+    <footer class="bg-[#FF82C6] relative">
+      <div class="wavy-line">
+        <img
+          src="/img/wavy-line.svg"
+          alt="Wavy line"
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <div class="px-8">
+        <div class="py-8 text-center">
+          <div class="flex items-center justify-center gap-8">
+            <div class="w-32 h-24 relative">
+              <img
+                src="/img/home/join-vector.svg"
+                alt="Join vector illustration"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <a
+              href="#"
+              onclick="loadPage('join-us.html'); return false;"
+              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
+            >
+              JUNTA-TE A NÓS!
+            </a>
+            <div class="w-32 h-24 relative">
+              <img
+                src="/img/home/join-vector.svg"
+                alt="Join vector illustration"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wavy-line">
+        <img
+          src="/img/wavy-line.svg"
+          alt="Wavy line"
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <div class="px-8">
+        <div class="py-8 text-center">
+          <div class="flex items-center justify-center gap-8">
+            <div class="w-32 h-24 relative">
+              <img
+                src="/img/home/tools-vector.svg"
+                alt="Tools vector illustration"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <a
+              href="#"
+              onclick="loadPage('tools.html'); return false;"
+              class="text-5xl font-semibold text-[#000000] uppercase tracking-wider hover:text-gray-700 transition-colors cursor-pointer"
+            >
+              FERRAMENTAS
+            </a>
+            <div class="w-32 h-24 relative">
+              <img
+                src="/img/home/tools-vector.svg"
+                alt="Tools vector illustration"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wavy-line">
+        <img
+          src="/img/wavy-line.svg"
+          alt="Wavy line"
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <div class="px-8">
+        <div class="py-8 flex flex-col gap-8">
+          <div class="flex justify-between items-start flex-wrap gap-8">
+            <div class="flex flex-col">
+              <div class="relative">
+                <div class="absolute top-1 left-0 w-8 h-8">
+                  <img
+                    src="/img/email-icon.svg"
+                    alt="Email icon"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="email-address ml-8">INFO@SERPENTINA.PT</div>
+              </div>
+              <div class="phone-number">+351 96 890 48 98</div>
+              <button class="newsletter-btn mt-8">
+                SUBSCREVER NEWSLETTER
+                <span class="newsletter-arrow">→</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="social-link"> INSTAGRAM ↗ </a>
+            <a href="#" class="social-link"> FACEBOOK ↗ </a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div
+              class="flex items-center gap-4 flex-wrap text-sm font-['ABC Diatype Rounded'] text-[#000000]"
+            >
+              <span class="footer-text">© 2025 Serpentina.</span>
+              <a href="#" class="footer-link"> Política de Privacidade. </a>
+              <span class="footer-text">
+                Design by
+                <a href="#" class="footer-link"> Macedo Cannatà </a>
+              </span>
+              <span class="footer-text">
+                Developing by
+                <a href="#" class="footer-link"> Xpto </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      async function loadPage(page) {
+        try {
+          console.log("Loading page:", page);
+          const response = await fetch(page);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const html = await response.text();
+
+          // Check if the page is a content-only file (starts with <!--)
+          if (html.trim().startsWith("<!--")) {
+            document.getElementById("content").innerHTML = html;
+          } else {
+            // If it's a full HTML page, extract the main content
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+            const mainContent = doc.querySelector("main");
+            if (mainContent) {
+              document.getElementById("content").innerHTML =
+                mainContent.innerHTML;
+            } else {
+              document.getElementById("content").innerHTML = html;
+            }
+          }
+
+          console.log("Page loaded successfully:", page);
+          updateActiveNav(page);
+        } catch (error) {
+          console.error("Error loading page:", page, error);
+          document.getElementById("content").innerHTML =
+            '<div class="p-8 text-center"><h2 class="text-2xl font-bold text-red-600">Erro ao carregar a página</h2><p class="text-gray-600">A página solicitada não pôde ser carregada.</p></div>';
+        }
+      }
+
+      function updateActiveNav(currentPage) {
+        // Update desktop nav
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+        const currentLink = document.querySelector(`a[href="${currentPage}"]`);
+        if (currentLink) {
+          currentLink.classList.add("active");
+        }
+
+        // Update mobile nav
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+        const currentMobileLink = document.querySelector(
+          `.mobile-nav a[href="${currentPage}"]`
+        );
+        if (currentMobileLink) {
+          currentMobileLink.classList.add("active");
+        }
+      }
+
+      // Mobile hamburger menu functionality
+      function initMobileMenu() {
+        const hamburger = document.getElementById("mobileHamburger");
+        const mobileNav = document.getElementById("mobileNav");
+        const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+
+        if (hamburger && mobileNav) {
+          hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("change");
+            mobileNav.classList.toggle("active");
+          });
+        }
+
+        if (mobileSearchBtn) {
+          mobileSearchBtn.addEventListener("click", () => {
+            const searchTerm = prompt("O que procura?");
+            if (searchTerm) {
+              console.log("Procurando por:", searchTerm);
+            }
+          });
+        }
+      }
+
+      // Initialize page
+      loadPage("/home.html");
+
+      // Desktop navigation
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const page = link.getAttribute("href");
+          if (page) {
+            loadPage(page);
+          }
+        });
+      });
+
+      // Mobile navigation
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const page = link.getAttribute("href");
+          if (page) {
+            loadPage(page);
+            // Close mobile menu after navigation
+            const hamburger = document.getElementById("mobileHamburger");
+            const mobileNav = document.getElementById("mobileNav");
+            if (hamburger && mobileNav) {
+              hamburger.classList.remove("change");
+              mobileNav.classList.remove("active");
+            }
+          }
+        });
+      });
+
+      // Initialize mobile menu
+      initMobileMenu();
+    </script>
+
+    <script>
+      // Desktop search functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const desktopSearchIcon = document.querySelector(".search-section img");
+        if (desktopSearchIcon) {
+          desktopSearchIcon.addEventListener("click", function () {
+            const searchTerm = prompt("O que procura?");
+            if (searchTerm) {
+              console.log("Procurando por:", searchTerm);
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
