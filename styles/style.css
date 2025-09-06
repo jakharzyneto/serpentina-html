@@ -142,82 +142,6 @@ body {
   color: black;
 }
 
-/* Main Content Styles */
-/* Custom stick figure styles */
-.stick-figure::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: #333;
-  border-radius: 50%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.stick-figure::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 40px;
-  background-color: #333;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.stick-figure.male::after {
-  border-radius: 0 0 0 20px;
-}
-
-.stick-figure.female::after {
-  border-radius: 0 0 20px 0;
-}
-
-/* Custom hammer styles */
-.hammer-left::before,
-.hammer-right::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border: 2px solid #333;
-  border-radius: 2px;
-  top: 10px;
-}
-
-.hammer-left::before {
-  left: 0;
-}
-
-.hammer-right::before {
-  right: 0;
-}
-
-.hammer-left::after,
-.hammer-right::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 8px;
-  background: linear-gradient(90deg, #ff8c00, #ffa500);
-  border: 2px solid #333;
-  border-radius: 4px;
-  top: 16px;
-}
-
-.hammer-left::after {
-  right: 0;
-  transform: rotate(-15deg);
-}
-
-.hammer-right::after {
-  left: 0;
-  transform: rotate(15deg);
-}
-
 /* FERRAMENTAS Section */
 .ferramentas-section {
   padding: 2rem 0;
@@ -241,31 +165,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   z-index: 2;
-}
-
-.hammer-left,
-.hammer-right {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hammer-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-.hammer-left {
-  transform: rotate(-15deg);
-}
-
-.hammer-right {
-  transform: rotate(15deg);
 }
 
 /* VER MAIS Button Styles */
