@@ -1,51 +1,454 @@
-<!-- Events Page Content -->
-<div class="py-16 bg-[#FF82C6]">
+<!-- Upcoming Events Page Content -->
+<div class="bg-[#07B93D]">
   <div class="container mx-auto px-4">
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="flex justify-center items-center gap-4 mb-8">
+      <button
+        class="text-white text-lg font-semibold px-4 py-2 hover:bg-white/10 rounded-lg transition-colors"
+      >
+        TODOS
+      </button>
+      <button
+        class="bg-yellow-400 text-white text-lg font-semibold px-6 py-3 rounded-lg relative"
+      >
+        SERPENTINA
+        <div
+          class="absolute -bottom-1 left-0 right-0 h-2 bg-yellow-400 rounded-b-lg"
+        ></div>
+      </button>
+      <button
+        class="bg-blue-400 text-white text-lg font-semibold px-6 py-3 rounded-lg relative"
+      >
+        OUTROS
+        <div
+          class="absolute -bottom-1 left-0 right-0 h-2 bg-blue-400 rounded-b-lg"
+        ></div>
+      </button>
+    </div>
+    <div class="text-center py-16">
       <h1
-        class="text-5xl lg:text-6xl font-bold text-gray-800 uppercase tracking-wider mb-8 drop-shadow-lg"
+        class="text-6xl lg:text-[80px] font-bold text-[#000000] uppercase tracking-wider"
+        style="font-family: 'ABC Stefan', cursive"
       >
-        EVENTOS
+        PRÓXIMOS EVENTOS
       </h1>
-      <div
-        class="bg-white/10 p-8 rounded-3xl border-4 border-gray-800 shadow-2xl"
-      >
-        <div class="relative rounded-2xl overflow-hidden shadow-xl mb-8">
-          <img
-            src="/img/home/tools-vector.svg"
-            alt="Events illustration"
-            class="w-full h-80 object-cover object-center transition-transform duration-300 hover:scale-105"
-          />
+    </div>
+  </div>
+  <div class="bg-[#07B93D]">
+    <div class="wavy-line">
+      <img
+        src="/img/wavy-line.svg"
+        alt="Wavy line"
+        class="w-full h-full object-contain"
+      />
+    </div>
+    <div class="container mx-auto px-4">
+      <div class="p-8 space-y-8">
+        <div class="flex flex-col lg:flex-row gap-6">
+          <div class="flex-1 lg:w-1/2">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4"
+            >
+              <div class="flex-1 flex flex-col gap-6">
+                <h3
+                  class="text-3xl lg:text-[32px] font-bold text-black uppercase leading-tight mb-2"
+                  style="font-family: 'ABC Stefan', cursive"
+                >
+                  DESTAQUE COM TITULO MUITO GRANDE MESMO MESMO
+                </h3>
+                <p
+                  class="text-lg lg:text-[18px] leading-relaxed text-[#000000] mb-4"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  Rua do Lugar, nº123, Sítio, Cidade, 1234-123
+                </p>
+                <p
+                  class="text-[#000000] mb-4 text-lg lg:text-[18px] leading-relaxed"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
+                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                  Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+                  Curabitur pellentesque nibh nibh, at maximus ante.
+                </p>
+                <a
+                  href="#"
+                  onclick="loadPage('spotlight.html'); return false;"
+                  class="ver-mais-btn"
+                >
+                  <span class="ver-mais-text">VER MAIS</span>
+                  <span class="ver-mais-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-shrink-0 lg:w-1/2">
+            <div class="flex gap-4 justify-between items-center">
+              <div class="flex gap-2">
+                <span
+                  class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  #Keyword
+                </span>
+                <span
+                  class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  #Keyword
+                </span>
+              </div>
+              <div class="text-right">
+                <div
+                  class="text-lg font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  10/10/2025 10:00
+                </div>
+                <div
+                  class="text-lg font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  Bonfim
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 lg:mt-8 w-full">
+              <img
+                src="/img/event/event1.svg"
+                alt="Event image"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
         </div>
-        <div class="text-center">
-          <h2
-            class="text-3xl font-bold text-gray-800 uppercase tracking-wider mb-6"
-          >
-            PRÓXIMOS EVENTOS
-          </h2>
-          <p
-            class="text-lg leading-relaxed text-gray-800 mb-8 text-justify max-w-3xl mx-auto"
-          >
-            Organizamos regularmente workshops, conferências e eventos especiais
-            que reúnem educadores, crianças e famílias para partilhar
-            experiências e aprender novas metodologias criativas.
-          </p>
-          <p
-            class="text-lg leading-relaxed text-gray-800 mb-8 text-justify max-w-3xl mx-auto"
-          >
-            Os nossos eventos são espaços de partilha, aprendizagem e
-            descoberta, onde a criatividade floresce e novas ideias nascem
-            através da colaboração e do trabalho em equipa.
-          </p>
-          <a href="#" class="ver-mais-btn">
-            <span class="ver-mais-text">VER EVENTOS</span>
-            <!-- <i class="fas fa-arrow-right"></i> -->
-            <img
-              src="/img/home/arrow-right.svg"
-              alt="Arrow right"
-              class="w-10 h-10"
-            />
-          </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#07B93D]">
+    <div class="wavy-line">
+      <img
+        src="/img/wavy-line.svg"
+        alt="Wavy line"
+        class="w-full h-full object-contain"
+      />
+    </div>
+    <div class="container mx-auto px-4">
+      <div class="p-8 space-y-8">
+        <div class="flex flex-col lg:flex-row gap-6">
+          <div class="flex-1 lg:w-1/2">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4"
+            >
+              <div class="flex-1 flex flex-col gap-6">
+                <h3
+                  class="text-3xl lg:text-[32px] font-bold text-black uppercase leading-tight mb-2"
+                  style="font-family: 'ABC Stefan', cursive"
+                >
+                  DESTAQUE COM TITULO MUITO GRANDE MESMO MESMO
+                </h3>
+                <p
+                  class="text-lg lg:text-[18px] leading-relaxed text-[#000000] mb-4"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  Rua do Lugar, nº123, Sítio, Cidade, 1234-123
+                </p>
+                <p
+                  class="text-[#000000] mb-4 text-lg lg:text-[18px] leading-relaxed"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
+                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                  Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+                  Curabitur pellentesque nibh nibh, at maximus ante.
+                </p>
+                <a
+                  href="#"
+                  onclick="loadPage('spotlight.html'); return false;"
+                  class="ver-mais-btn"
+                >
+                  <span class="ver-mais-text">VER MAIS</span>
+                  <span class="ver-mais-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-shrink-0 lg:w-1/2">
+            <div class="flex gap-4 justify-between items-center">
+              <div class="flex gap-2">
+                <span
+                  class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  #Keyword
+                </span>
+                <span
+                  class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  #Keyword
+                </span>
+              </div>
+              <div class="text-right">
+                <div
+                  class="text-lg font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  10/10/2025 10:00
+                </div>
+                <div
+                  class="text-lg font-semibold text-black"
+                  style="font-family: Roboto, sans-serif"
+                >
+                  Bonfim
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 lg:mt-8 w-full">
+              <img
+                src="/img/event/event1.svg"
+                alt="Event image"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-100 relative">
+  <div class="wavy-line">
+    <img
+      src="/img/wavy-line.svg"
+      alt="Wavy line"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div class="px-8 py-12">
+    <div class="text-center mb-12">
+      <h3
+        class="text-5xl lg:text-[80px] font-semibold text-[#000000] uppercase tracking-wider"
+      >
+        HISTÓRICO
+      </h3>
+    </div>
+  </div>
+  <div class="wavy-line">
+    <img
+      src="/img/wavy-line.svg"
+      alt="Wavy line"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="space-y-6">
+      <div class="p-6">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+        >
+          <div class="flex-1">
+            <h4
+              class="text-2xl lg:text-[32px] font-bold text-black uppercase leading-tight mb-2"
+            >
+              DESTAQUE COM TITULO MUITO GRANDE MESMO MESMO
+            </h4>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+            <div class="flex gap-2">
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+            </div>
+            <div class="text-right">
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                10/10/2025 10:00
+              </div>
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                Bonfim
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wavy-line">
+    <img
+      src="/img/wavy-line.svg"
+      alt="Wavy line"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="space-y-6">
+      <div class="p-6">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+        >
+          <div class="flex-1">
+            <h4
+              class="text-2xl lg:text-[32px] font-bold text-black uppercase leading-tight mb-2"
+            >
+              DESTAQUE COM TITULO MUITO GRANDE MESMO MESMO
+            </h4>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+            <div class="flex gap-2">
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+            </div>
+            <div class="text-right">
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                10/10/2025 10:00
+              </div>
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                Bonfim
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wavy-line">
+    <img
+      src="/img/wavy-line.svg"
+      alt="Wavy line"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="space-y-6">
+      <div class="p-6">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+        >
+          <div class="flex-1">
+            <h4
+              class="text-2xl lg:text-[32px] font-bold text-black uppercase leading-tight mb-2"
+            >
+              DESTAQUE COM TITULO MUITO GRANDE MESMO MESMO
+            </h4>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+            <div class="flex gap-2">
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+            </div>
+            <div class="text-right">
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                10/10/2025 10:00
+              </div>
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                Bonfim
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wavy-line">
+    <img
+      src="/img/wavy-line.svg"
+      alt="Wavy line"
+      class="w-full h-full object-contain"
+    />
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="space-y-6">
+      <div class="p-6">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+        >
+          <div class="flex-1">
+            <h4
+              class="text-2xl lg:text-[32px] font-bold text-black uppercase leading-tight mb-2"
+            >
+              DESTAQUE COM TITULO MUITO GRANDE MESMO MESMO
+            </h4>
+          </div>
+          <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+            <div class="flex gap-2">
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+              <span
+                class="bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                #Keyword
+              </span>
+            </div>
+            <div class="text-right">
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                10/10/2025 10:00
+              </div>
+              <div
+                class="text-lg font-semibold text-black"
+                style="font-family: Roboto, sans-serif"
+              >
+                Bonfim
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
